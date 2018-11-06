@@ -1,0 +1,171 @@
+$azul_padrao: #007491;
+$azul_claro: #317f9f;
+$azul_medio: #1d6a8a;
+$azul_hover: #2992bd;
+$cinza_bordas: #bcbcbc;
+$cinza_titulos: #807e7e;
+$laranja_padrao: #dd9d4b;
+
+body {
+    margin: 0;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: $cinza_titulos;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: "nav bar" "nav painel" "nav footer";
+    grid-template-rows: 8% 87% 5%;
+    grid-template-columns: 5% 95%;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0px;
+    #nav-bar {
+        grid-area: bar;
+        width: 100%;
+        height: 100%;
+        background: #f3f3f4;
+        display: flex;
+        justify-content: end;
+        align-content: center;
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: end;
+            align-content: center;
+            li {
+                list-style: none;
+                width: 70px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                color: #a7b1c2;
+                i {
+                    font-size: 20px;
+                }
+                .exit {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    #side-bar{
+        grid-area: nav;
+        background: #171436cc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            li {
+                list-style: none;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                color: #a7b1c2;
+                i {
+                    font-size: 20px;
+                }
+                &:hover {
+                    background: #ffffff81;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            img {
+                background: #ffffff;
+                width: 40px;
+                height: 40px;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    #conteudo {
+        grid-area: painel;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 2px;
+        #relatorio-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .relatorio__titulo {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .relatorio__table {
+                width: 100%;
+                height: 80%;
+                padding: 10px 20px 0 10px;
+                flex-direction: column;
+                overflow: scroll;
+                display: block;
+                .buttons-excel {
+                    background-color: $azul_medio;
+                    border-color: $azul_medio;
+                    color: #FFFFFF;
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                    margin: 0 0 0 10px;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    touch-action: manipulation;
+                    background-image: none;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                    &:hover{
+                        background: $azul_hover;
+                        border-color: $azul_hover;
+                    }
+                }
+                table {
+                    height: 100%;
+                    padding: 0 25px 0 0;
+                    text-align: center;
+                    font-size: 11px;
+                    color: #393939;;
+                }
+            }
+        }
+    }
+
+    #footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0 0 0 30px;
+        font-size: 13px;
+    }
+}

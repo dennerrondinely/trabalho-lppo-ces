@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h6 {
+    margin: 0;
+}
+
+#bar {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: "nav bar" "nav painel" "nav footer";
+    grid-template-rows: 8% 87% 5%;
+    grid-template-columns: 5% 95%;
+    height: 100vh;
+    margin: 0px;
+}
+
+#nav-bar {
+    grid-area: bar;
+    width: 100%;
+    height: 100%;
+    background: #f3f3f4;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+}
+
+#nav-bar ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+}
+
+#nav-bar ul li {
+    list-style: none;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #a7b1c2;
+}
+
+#nav-bar ul li i {
+    font-size: 20px;
+}
+
+#nav-bar ul li .user {
+    color: red;
+}
+
+#side-bar {
+    grid-area: nav;
+    background: #284a59;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#side-bar ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#side-bar ul li {
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #a7b1c2;
+}
+
+#side-bar ul li i {
+    font-size: 20px;
+}
+
+#side-bar ul li:hover {
+    background: #ffffff81;
+    color: #ffffff;
+}
+
+#side-bar .logo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#side-bar .logo img {
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+#conteudo {
+    grid-area: painel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2px;
+}
+
+#footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 30px;
+    font-size: 13px;
+}

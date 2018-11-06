@@ -1,0 +1,20 @@
+{{title}}
+
+<form action="">
+    <input type="text" ng-model="nome">
+    <input type="number" ng-model="id">
+    <button ng-click="salvar()">salvar</button>
+    <button ng-click="deletar()">deletar</button>
+</form>
+<table>
+    <thead>
+        <th>id</th>
+        <th>Nome</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="n in arr">
+            <td>{{ n.id }}</td>
+            <td>{{ n.nome }}</td>
+        </tr>
+    </tbody>
+</table>
