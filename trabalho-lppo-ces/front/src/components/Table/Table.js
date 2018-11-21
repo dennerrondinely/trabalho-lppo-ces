@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Table.css'
-import { GoSearch } from "react-icons/go";
+import { GoSearch } from "react-icons/go"
+import {TiDelete, TiEdit} from "react-icons/ti"
 import moment from 'moment'
 export default class Table extends Component {
     constructor() {
@@ -12,6 +13,9 @@ export default class Table extends Component {
 
     updateSearch(event) {
         this.setState({ search: event.target.value.substr(0, 20) })
+    }
+    deletar = () => {
+        alert('deletar')
     }
     render() {
         if (this.props.tela === "pecas") {
@@ -32,14 +36,25 @@ export default class Table extends Component {
                         <div className="table-header-container">
                             <div className="table-row">
                                 {this.props.titulos.map(titulo => <div className="table-header">{titulo}</div>)}
+                                <div className="table-header">Ações</div>
                             </div>
                         </div>
                         <div className="table-body">
                             {filteredLinhas.map((linha, indice) =>
-                                <tr className={indice % 2 === 0 ? "table-row" : "table-row-bordered"} onClick={() => this.props.history.push(`/pecas/${linha.id}`)}>
+                                <tr className={indice % 2 === 0 ? "table-row" : "table-row-bordered"}>
                                     <div className="table-data">{linha.descricao}</div>
                                     <div className="table-data">{linha.data ? moment(linha.data).format('DD/MM/YYYY') : null}</div>
                                     <div className="table-data">{linha.observacao}</div>
+                                    <div className="table-data">
+                                        <div className="actionsTable">
+                                            <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                            <TiEdit/>
+                                            </span>
+                                            <span className="deletarBtn" onClick={() => this.deletar('rota')}>
+                                                <TiDelete/>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </tr>
                             )}
                         </div>
@@ -64,15 +79,24 @@ export default class Table extends Component {
                         <div className="table-header-container">
                             <div className="table-row">
                                 {this.props.titulos.map(titulo => <div className="table-header">{titulo}</div>)}
+                                <div className="table-header">Ações</div>
                             </div>
                         </div>
                         <div className="table-body">
                             {filteredLinhas.map((linha, indice) =>
-                                <tr className={indice % 2 === 0 ? "table-row" : "table-row-bordered"} onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                <tr className={indice % 2 === 0 ? "table-row" : "table-row-bordered"} >
                                     <div className="table-data">{linha.data}</div>
                                     <div className="table-data">{linha.descricao}</div>
                                     <div className="table-data">{linha.inicioEvento}</div>
                                     <div className="table-data">{linha.fimEvento}</div>
+                                    <div className="table-data">
+                                        <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                           <TiEdit/>
+                                        </span>
+                                        <span className="deletarBtn" onClick={() => this.deletar('rota')}>
+                                            <TiDelete/>
+                                        </span>
+                                    </div>
                                 </tr>
                             )}
                         </div>
