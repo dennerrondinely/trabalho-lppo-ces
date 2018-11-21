@@ -1,0 +1,149 @@
+.HeaderCadastroPecas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.formPecas {
+    display: flex;
+    flex-direction: column;
+    width: 68% !important;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.formPecas label{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    align-content: space-around;
+    width: 100%;
+}
+.formInput {
+    display: flex;
+    width: 100% !important;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 0;
+    position: relative;
+}
+.inputLabel {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding:0;
+}
+
+.formInput label{
+    position: absolute;
+    top: -20px;
+    left: 3px;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.formInput textarea,
+.formInput select,
+.formInput input{
+    width: 100%;
+    height: 25px;
+    outline: none !important;
+    border-left: 1px solid  #2980b9;
+    border-bottom: 1px solid  #2980b9;
+    border-top: 1px solid  #2980b9;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 15px;
+}
+
+.formInput select {
+    height: 29px;
+    width: 50%;
+    align-self: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.formInput textarea {
+    height: 100px;
+    border: 1px solid #2980b9;
+    resize: none;
+    border-radius: 10px;
+}
+.formPecas > div:nth-child(2) > div:nth-child(1) > span:nth-child(3){
+    left: 20%;
+}
+
+.formInput .icon {
+    outline: none !important;
+    border-left: 1px solid  #2980b9;
+    background-color: #2980b9;
+    display: flex;
+    width: 60px;
+    height: 29.9px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    left: -3px;
+    margin-right: 15px;
+}
+
+.btnAdicionarCliente {
+    background: #2980b9;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.voltar {
+    background: #2980b9;
+    align-self: flex-start;
+    width: 90px;
+    height: 90px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    position: absolute;
+    left: 20px;
+    top: 12vh;
+}

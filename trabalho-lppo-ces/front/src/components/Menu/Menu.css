@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+.example-appear {
+    background:'red';
+    opacity: 1;
+
+ }
+ .example-appear.example-appear-active {
+    opacity: 0.3;
+    top: '-4vh'; 
+    height: 101vh;
+    background: 'rgba(0, 0, 0, 0.5)';
+    width: 100vw;
+    position: 'absolute';
+    transition: all 100s ease-in;
+ }
+
+ .example-leave .example-leave-active {
+    opacity:1;
+ }
+
+ .menuContainer {
+   background: #2980b9;  /* fallback for old browsers */
+   color: white;
+   height: 100vh;
+ }
+
+ .logoCes img {
+     width: 90px;
+     height: 90px;
+     left: 50%;
+     position: relative;
+     transform: translateX(-48%);
+ }
+ .listMenu {
+     display: flex;
+     flex-direction: column;
+     list-style-type: none;
+     align-items: center;
+     justify-content: center;
+     justify-items: center;
+     padding: 0;
+     overflow-y: auto;
+     max-height: 70vh;
+     margin-top: 20px;
+     padding-right: 10px;
+     overflow-x: hidden;
+ }
+ .titleDropdown,
+ .listMenu li{
+    display: flex;
+    align-content: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.31);
+    cursor: pointer;
+    width: 104%;
+}
+
+.titleDropdown:hover,
+.listMenu li:hover{
+   background: #0c76bd
+}
+
+ .logoCes {
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+ }

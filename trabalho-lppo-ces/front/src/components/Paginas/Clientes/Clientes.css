@@ -1,0 +1,79 @@
+.Main {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.containerClientes {
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleContainerClientes {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+.titleContainerClientes .icon {
+    font-size: 130%;
+    margin-left: 10px;
+}
+
+.containerClientesBackground {
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+}
+.containerClientesConteudo {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.containerClienteAdicionar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btnAdicionarCliente {
+    background: #2980b9;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    font-size: 15px;
+}
+.btnAdicionarCliente:hover {
+    background: #297fb9a9;
+}
+.btnAdicionarCliente  .icon + svg,
+.btnAdicionarCliente span {
+    color: white !important;
+}
+
+.btnAdicionarCliente  .icon {
+    font-size: 30px;
+}

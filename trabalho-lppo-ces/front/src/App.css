@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+
+.Inicio * {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+.Main {
+  padding-top: 56px !important;
+}
+
+body {
+  overflow: hidden;
+}

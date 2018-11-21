@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+.Main {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.containerPecas,
+.containerVisitas {
+    width: 45%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titleContainerPecas,
+.titleContainerVisitas {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+}
+.titleContainerPecas .icon,
+.titleContainerVisitas .icon {
+    font-size: 130%;
+    margin-left: 10px;
+}
+.containerPecasBackground,
+.containerVisitaBackground {
+    background: #0F2027;
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+}
+.containerPecasConteudo,
+.containerVisitaConteudo {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
