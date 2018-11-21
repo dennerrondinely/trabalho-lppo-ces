@@ -6,7 +6,7 @@ import './Menu.css'
 import ItemMenuDropDown from './ItemMenuDropDown'
 import ItemMenu from './ItemMenu'
 import { FiCalendar, FiUsers, FiSettings} from "react-icons/fi"
-import { GoPaintcan, GoHome } from "react-icons/go"
+import { GoPaintcan, GoHome, GoGear } from "react-icons/go"
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group')
 export default class MenuApp extends Component {
 
@@ -55,6 +55,7 @@ export default class MenuApp extends Component {
             <li><ItemMenu name="Home" icon={<GoHome />} link="/" handleClick={this.handleClick}/> </li>
             <li><ItemMenu name="Agendamentos" icon={<FiCalendar />} link="/agendamentos" handleClick={this.handleClick}/></li>
             <li><ItemMenu name="Peças" icon={<GoPaintcan />} link="/pecas" handleClick={this.handleClick}/></li>
+            <li><ItemMenu name="Conservação" icon={<GoGear />} link="/conservacao" handleClick={this.handleClick}/></li>
           </ul>
         </OffCanvasMenu>
       </OffCanvas>

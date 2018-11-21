@@ -8490,6 +8490,11 @@ react-burger-menu@^2.5.4:
     prop-types "^15.6.1"
     snapsvg-cjs "0.0.6"
 
+react-datetime-inputs@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-datetime-inputs/-/react-datetime-inputs-0.0.6.tgz#c0d16d42e22ed36349ced5db701589a87ef2bb2c"
+  integrity sha512-qp77oZ1IJyX2uCasVIHd+vvpf/TMuXto+sKnn9z3ACy8+kVtvVmTXzzKEiwK9/FSaRmz/gu1EfaHM4seS7ClBw==
+
 react-dev-utils@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.1.1.tgz#a07e3e8923c4609d9f27e5af5207e3ca20724895"

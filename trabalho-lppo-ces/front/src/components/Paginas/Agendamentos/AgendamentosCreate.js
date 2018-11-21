@@ -85,12 +85,12 @@ class AgendamentosCreate extends React.Component {
                         <div className="formInput">
                             <div className="inputLabel">
                                 <label>Inicio</label>
-                                <input className="input" type="text" id="inicioEvento" placeholder="Inicio" name="inicioEvento" value={inicioEvento} onChange={this.handleChange}/>
+                                <input className="input" type="time" id="inicioEvento" placeholder="Inicio" name="inicioEvento" value={inicioEvento} onChange={this.handleChange}/>
                                 <span className="icon"><GoCalendar /></span>
                             </div>
                             <div className="inputLabel">
                                 <label>Fim</label>
-                                <input className="input" type="text" id="fim" placeholder="Fim" name="fimEvento" value={fimEvento} onChange={this.handleChange}/>
+                                <input className="input" type="time" id="fim" placeholder="Fim" name="fimEvento" value={fimEvento} onChange={this.handleChange}/>
                                 <span className="icon"><GoCalendar /></span>
                             </div>
                         </div>

@@ -9,6 +9,7 @@ import Clientes from './Clientes/Clientes'
 import ClientesCreate from './Clientes/ClientesCreate'
 import Agendamentos from './Agendamentos/Agendamentos'
 import AgendamentosCreate from './Agendamentos/AgendamentosCreate'
+import Conservacao from './Conservacao/Conservacao'
 import '../Menu/Menu.css'
 export default class Rota extends Component {
     render() {    
@@ -24,6 +25,7 @@ export default class Rota extends Component {
                         <Route exact path="/clientes/:id" render={({history}) => <ClientesCreate history={history}/> }/>
                         <Route exact path="/agendamentos" render={({history}) => <Agendamentos history={history}/> }/>
                         <Route exact path="/agendamentos/:id" component={AgendamentosCreate }/>
+                        <Route exact path="/conservacao" component={Conservacao }/>
                         <Route component={NotFound} />
                     </Switch>
                 </div>
