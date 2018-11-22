@@ -31,7 +31,7 @@ export default class Table extends Component {
             return (
                 <React.Fragment>
                     {this.props.filter && <div className="filter">
-                        <input type="text" placeholder="Digite o que gostaria de buscar na tabela"
+                        <input type="text" placeholder="Filtre por NOME"
                             value={this.state.search}
                             onChange={this.updateSearch.bind(this)}
                         /><span><GoSearch /></span>
@@ -74,7 +74,7 @@ export default class Table extends Component {
             return (
                 <React.Fragment>
                     {this.props.filter && <div className="filter">
-                        <input type="text" placeholder="Digite o que gostaria de buscar na tabela"
+                        <input type="text" placeholder="Filtre por NOME"
                             value={this.state.search}
                             onChange={this.updateSearch.bind(this)}
                         /><span><GoSearch /></span>

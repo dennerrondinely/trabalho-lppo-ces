@@ -55,7 +55,6 @@ export default class MenuApp extends Component {
             <li><ItemMenu name="Home" icon={<GoHome />} link="/" handleClick={this.handleClick}/> </li>
             <li><ItemMenu name="Agendamentos" icon={<FiCalendar />} link="/agendamentos" handleClick={this.handleClick}/></li>
             <li><ItemMenu name="Peças" icon={<GoPaintcan />} link="/pecas" handleClick={this.handleClick}/></li>
-            <li><ItemMenu name="Conservação" icon={<GoGear />} link="/conservacao" handleClick={this.handleClick}/></li>
           </ul>
         </OffCanvasMenu>
       </OffCanvas>
