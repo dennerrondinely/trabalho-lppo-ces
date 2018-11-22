@@ -17,7 +17,7 @@ export default class Table extends Component {
         if (this.props.tela === "pecas") {
         let filteredLinhas = this.props.linhas ? this.props.linhas.filter(
             (linha) => {
-                return linha.observacao.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+                return linha.descricao.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
             }
         ) : [];
             return (
