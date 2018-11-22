@@ -3,6 +3,7 @@ import './Table.css'
 import { GoSearch } from "react-icons/go"
 import {TiDelete, TiEdit} from "react-icons/ti"
 import moment from 'moment'
+import {DELETE} from '../../utils/Api'
 export default class Table extends Component {
     constructor() {
         super();
@@ -14,8 +15,10 @@ export default class Table extends Component {
     updateSearch(event) {
         this.setState({ search: event.target.value.substr(0, 20) })
     }
-    deletar = () => {
-        alert('deletar')
+    deletar = (event, rota) => {
+        let linha = event.currentTarget.parentNode.parentNode.parentNode
+        DELETE(rota)
+        .then(linha.style.display = 'none')
     }
     render() {
         if (this.props.tela === "pecas") {
@@ -50,7 +53,7 @@ export default class Table extends Component {
                                             <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
                                             <TiEdit/>
                                             </span>
-                                            <span className="deletarBtn" onClick={() => this.deletar('rota')}>
+                                            <span className="deletarBtn" onClick={(event) => this.deletar(event, `pecas/${linha.id}`)}>
                                                 <TiDelete/>
                                             </span>
                                         </div>
@@ -93,7 +96,7 @@ export default class Table extends Component {
                                         <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
                                            <TiEdit/>
                                         </span>
-                                        <span className="deletarBtn" onClick={() => this.deletar('rota')}>
+                                        <span className="deletarBtn" onClick={(event ) => this.deletar(event,`eventos/${linha.id}`)}>
                                             <TiDelete/>
                                         </span>
                                     </div>
