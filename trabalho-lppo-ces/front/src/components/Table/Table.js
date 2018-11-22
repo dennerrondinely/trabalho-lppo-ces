@@ -93,12 +93,14 @@ export default class Table extends Component {
                                     <div className="table-data">{linha.inicioEvento}</div>
                                     <div className="table-data">{linha.fimEvento}</div>
                                     <div className="table-data">
-                                        <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
-                                           <TiEdit/>
-                                        </span>
-                                        <span className="deletarBtn" onClick={(event ) => this.deletar(event,`eventos/${linha.id}`)}>
-                                            <TiDelete/>
-                                        </span>
+                                        <div className="actionsTable">
+                                            <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                            <TiEdit/>
+                                            </span>
+                                            <span className="deletarBtn" onClick={(event) => this.deletar(event, `eventos/${linha.id}`)}>
+                                                <TiDelete/>
+                                            </span>
+                                        </div>
                                     </div>
                                 </tr>
                             )}
