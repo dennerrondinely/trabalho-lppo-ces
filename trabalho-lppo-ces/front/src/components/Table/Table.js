@@ -25,7 +25,7 @@ export default class Table extends Component {
         if (this.props.tela === "pecas") {
         let filteredLinhas = this.props.linhas ? this.props.linhas.filter(
             (linha) => {
-                return linha.observacao.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+                return linha.descricao.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
             }
         ) : [];
             return (
@@ -95,7 +95,7 @@ export default class Table extends Component {
                                     <div className="table-data">{linha.fimEvento}</div>
                                    <div className="table-data">
                                     {delRow && <div className="actionsTable">
-                                    <span className="editarBtn" onClick={() => this.props.history.push(`eventos/${linha.id}`)}>
+                                    <span className="editarBtn" onClick={() => this.props.history.push(`agendamentos/${linha.id}`)}>
                                            <TiEdit/>
                                         </span>
                                         <span className="deletarBtn" onClick={(event ) => this.deletar(event,`eventos/${linha.id}`)}>
