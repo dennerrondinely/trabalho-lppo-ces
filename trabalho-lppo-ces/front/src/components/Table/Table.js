@@ -21,6 +21,7 @@ export default class Table extends Component {
         .then(linha.style.display = 'none')
     }
     render() {
+        let {delRow} = this.props
         if (this.props.tela === "pecas") {
         let filteredLinhas = this.props.linhas ? this.props.linhas.filter(
             (linha) => {
@@ -49,14 +50,14 @@ export default class Table extends Component {
                                     <div className="table-data">{linha.data ? moment(linha.data).format('DD/MM/YYYY') : null}</div>
                                     <div className="table-data">{linha.observacao}</div>
                                     <div className="table-data">
-                                        <div className="actionsTable">
-                                            <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                        {delRow && <div className="actionsTable">
+                                            <span className="editarBtn" onClick={() => this.props.history.push(`/pecas/${linha.id}`)}>
                                             <TiEdit/>
                                             </span>
                                             <span className="deletarBtn" onClick={(event) => this.deletar(event, `pecas/${linha.id}`)}>
                                                 <TiDelete/>
                                             </span>
-                                        </div>
+                                        </div>}
                                     </div>
                                 </tr>
                             )}
@@ -92,14 +93,16 @@ export default class Table extends Component {
                                     <div className="table-data">{linha.descricao}</div>
                                     <div className="table-data">{linha.inicioEvento}</div>
                                     <div className="table-data">{linha.fimEvento}</div>
-                                    <div className="table-data">
-                                        <span className="editarBtn" onClick={() => this.props.history.push(`/agendamentos/${linha.id}`)}>
+                                   <div className="table-data">
+                                    {delRow && <div className="actionsTable">
+                                    <span className="editarBtn" onClick={() => this.props.history.push(`eventos/${linha.id}`)}>
                                            <TiEdit/>
                                         </span>
                                         <span className="deletarBtn" onClick={(event ) => this.deletar(event,`eventos/${linha.id}`)}>
                                             <TiDelete/>
                                         </span>
-                                    </div>
+                                    </div> }
+                                    </div> 
                                 </tr>
                             )}
                         </div>

@@ -42,7 +42,8 @@ class Clientes extends React.Component {
                 linhas={this.state.eventos}
                 history={this.props.history}
                 tela={"eventos"}
-                filter={true} />
+                filter={true}
+                delRow={true} />
               </div>
             </div>
           </div>

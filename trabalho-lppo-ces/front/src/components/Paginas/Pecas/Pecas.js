@@ -44,6 +44,7 @@ componentDidMount() {
                   filter={true}
                   history={this.props.history}
                   tela={"pecas"}
+                  delRow={true}
                 />
               </div>
             </div>

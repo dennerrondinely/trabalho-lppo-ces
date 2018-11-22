@@ -90,9 +90,9 @@
   }
 
 .actionsTable {
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
+    display: flex !important;
+    width: 100% !important;
+    align-items: flex-start !important;
 }
 .editarBtn {
     display: flex;

@@ -23,7 +23,7 @@ class PecasCreate extends React.Component {
       this.setState({ id })
       GET(`pecas/${id}`)
         .then(response => {
-          console.log(response)
+          this.setState({ descricao: response.descricao, observacao: response.observacao, categoria: response.idCategoria })
         })
     }
   }

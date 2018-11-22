@@ -37,9 +37,10 @@ class AgendamentosCreate extends React.Component {
       }
       handleClick = () => {//T14:32:02-02:00 T14:32:02-02:00
         let {descricao, inicioEvento, fimEvento, data} = this.state
+        const {id} = this.props.match.params
         
         if(this.state.id){
-          PUT(`eventos/${this.state.id}`,{descricao, inicioEvento: `2018-11-21T${inicioEvento}-02:00`, fimEvento: `2018-11-21T${fimEvento}-02:00`, data: `${data}T14:32:02-02:00`})
+          PUT(`eventos/${this.state.id}`,{id, descricao, inicioEvento: `2018-11-21T${inicioEvento}-02:00`, fimEvento: `2018-11-21T${fimEvento}-02:00`, data: `${data}T14:32:02-02:00`})
           .then(response => { 
             this.props.history.push('/agendamentos')
           })
