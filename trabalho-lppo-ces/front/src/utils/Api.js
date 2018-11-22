@@ -28,7 +28,7 @@ export const PUT = (rota,params) =>
     },
     body: JSON.stringify(params)
 })
-    .then(res => res.json())
+    .then(res => res.text())
     .then(data => data)
 
 export const DELETE = (rota,params) =>
@@ -39,6 +39,6 @@ export const DELETE = (rota,params) =>
     },
     body: JSON.stringify(params)
 })
-    .then(res => res.json())
+    .then(res => res.text())
     .then(data => data)
 

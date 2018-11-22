@@ -88,4 +88,45 @@
 .Main {
     padding-top: 56px !important;
   }
-  
+
+.actionsTable {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+.editarBtn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #2980b9;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.deletarBtn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #ff4757;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.table-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
